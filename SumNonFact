@@ -1,0 +1,50 @@
+/* Problem Statment: write a program which accept from user and return summation of all its non factors. */
+
+/*
+   Algorithm:
+   START
+	Enter number
+		Using for loop
+		 Return summation of all its non factors.
+   END
+
+*/
+
+#include<stdio.h>           //Header file
+
+//////////////////////////////////////////////////////////
+//
+// Function Name:    SumNonFact
+// Input:            integer
+// Output:           integer
+// Description :     write a program summation of all its non factors.
+// Date:             1 August 2020
+// Author:           Ankita A Javalekar
+//
+//////////////////////////////////////////////////////////
+
+int SumNonFact(int iNo)
+{
+   int iCnt=0;
+   int iSum=0;
+	for(iCnt=1;iCnt<=iNo;iCnt++)
+	{
+		if(iNo%iCnt!=0)
+		{
+		  iSum=iSum+iCnt;
+		}
+	}
+	return iSum;
+}
+
+
+int main()
+{
+   int iValue=0;
+   int iRet=0;
+   printf("Enter number ");
+   scanf("%d",&iValue);
+   iRet=SumNonFact(iValue);
+   printf("%d",iRet);
+    return 0;
+}
