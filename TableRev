@@ -1,0 +1,44 @@
+/* Problem Statment: Write a program which accept numbers from user and display its table in reverse order.
+Input :  2  Output :  20 18 16  14 12 10 8 6 4 2
+Input :  5  Output :  50 45 40 35 30 25 20 15 10 5
+Input : -5  Output :  50 45 40 35 30 25 20 15 10 5*/
+
+/*
+   Algorithm:
+   START
+	Enter numbers
+	Using For loop
+      display its table
+   END
+*/
+	  ////////////////////////////////////////////////
+	  // Function Name: TableRev
+	  //Input: 			integer
+	  //Output:			intger
+	  //Description:	display its table in rverse order
+	  //Date:			6 August 2020
+	  //Author:		    Ankita A Javalekar
+	  ////////////////////////////////////////////////
+#include<stdio.h>
+ void TableRev(int iNo)
+{
+     int i,itable;
+		if (iNo<0)
+		{
+			iNo=-iNo;
+		}
+        for(i=10;i>=1;i--)
+        {
+            itable=iNo*i;
+            printf("%d\t",itable);
+        }
+
+}
+int main()
+{
+    int iValue=0;
+    printf("enter number:\t");
+    scanf("%d",&iValue);
+    TableRev(iValue);
+    return 0;
+}
