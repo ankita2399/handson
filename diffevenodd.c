@@ -34,7 +34,7 @@ int main()
     int iRet=0;
     printf("Please Enter Number");
     scanf("%d",&iValue);
-    iRet=CountTwo(iValue);
+    iRet=doffevenodd(iValue);
     printf("%d",iRet);
     return 0;
 }
